@@ -10,7 +10,6 @@ class SignupPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Color(0xffF5F5F5),
           padding: EdgeInsets.only(
             top: 80,
             left: 20,
@@ -21,7 +20,6 @@ class SignupPage extends StatelessWidget {
             children: [
               Container(
                 decoration: BoxDecoration(
-                  color: Colors.white,
                   boxShadow: [
                     new BoxShadow(
                       color: Colors.black12,
@@ -42,10 +40,7 @@ class SignupPage extends StatelessWidget {
                     children: [
                       Text(
                         "Sign Up",
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w500,
-                        ),
+                        style: Theme.of(context).textTheme.headline4,
                       ),
                       SizedBox(
                         height: 60,
@@ -108,7 +103,7 @@ class SignupPage extends StatelessWidget {
                       Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color: Colors.black,
+                          color: Theme.of(context).primaryColor,
                           borderRadius: BorderRadius.all(
                             Radius.circular(5),
                           ),

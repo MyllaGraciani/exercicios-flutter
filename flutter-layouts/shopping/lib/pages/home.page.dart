@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:shopping/widgets/category/category-list.widget.dart';
 import 'package:shopping/widgets/products/product-list.widget.dart';
@@ -12,7 +10,6 @@ class HomePage extends StatelessWidget {
       body: Container(
         padding: EdgeInsets.all(15),
         width: double.infinity,
-        color: Color(0xffF5F5F5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -25,9 +22,7 @@ class HomePage extends StatelessWidget {
             ),
             Text(
               "Categories",
-              style: TextStyle(
-                fontSize: 30,
-              ),
+              style: Theme.of(context).textTheme.headline4,
             ),
             SizedBox(
               height: 10,
@@ -44,9 +39,7 @@ class HomePage extends StatelessWidget {
               children: [
                 Text(
                   "Best Selling",
-                  style: TextStyle(
-                    fontSize: 30,
-                  ),
+                  style: Theme.of(context).textTheme.headline4,
                 ),
                 TextButton(
                   onPressed: () {},
