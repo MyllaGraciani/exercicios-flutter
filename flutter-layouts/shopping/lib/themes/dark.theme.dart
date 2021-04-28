@@ -7,13 +7,14 @@ const backgroundColor = const Color(0xFFF5F5F5);
 
 ThemeData darkTheme() {
   return ThemeData(
-    // primarySwatch: primaryColor,
+    primarySwatch: Colors.grey,
     brightness: brightness,
-    // textTheme: new TextTheme(
-    //   body1: new TextStyle(color: Colors.red),
-    //   display4: new TextStyle(fontSize: 78),
-    //   button: new TextStyle(color: Colors.green),
-    // ),
+    textTheme: new TextTheme(
+      bodyText2: new TextStyle(color: Colors.white),
+      headline1: new TextStyle(fontSize: 78),
+      button: new TextStyle(color: Colors.green),
+      headline5: new TextStyle(color: Colors.deepPurple),
+    ),
     // tabBarTheme:
     // accentIconTheme:
     // accentTextTheme:
