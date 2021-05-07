@@ -1,12 +1,9 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
-
 class CategoryModel {
   String id;
   String title;
   String tag;
 
-  CategoryModel({this.id, this.tag, this.title});
+  CategoryModel({this.id, this.title, this.tag});
 
   CategoryModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];

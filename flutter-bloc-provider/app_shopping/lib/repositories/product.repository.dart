@@ -4,7 +4,6 @@ import '../models/product-list-item.model.dart';
 import '../settings.dart';
 
 class ProductRepository {
-  //future vai retornar depois
   Future<List<ProductListItemModel>> getAll() async {
     var url = "${Settings.apiUrl}v1/products";
     Response response = await Dio().get(url);

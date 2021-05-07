@@ -3,7 +3,7 @@ class CategoryListItemModel {
   String title;
   String tag;
 
-  CategoryListItemModel({this.id, this.tag, this.title});
+  CategoryListItemModel({this.id, this.title, this.tag});
 
   CategoryListItemModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
