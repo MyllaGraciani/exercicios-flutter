@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 
-class TransactionForm extends StatelessWidget {
-  final valueController = TextEditingController();
-  final titleController = TextEditingController();
-
+class TransactionForm extends StatefulWidget {
   final void Function(String, double) onSubmit;
+
+  TransactionForm(this.onSubmit);
+
+  @override
+  _TransactionFormState createState() => _TransactionFormState();
+}
+
+class _TransactionFormState extends State<TransactionForm> {
+  final valueController = TextEditingController();
+
+  final titleController = TextEditingController();
 
   _submitForm() {
     final title = titleController.text;
@@ -14,10 +22,8 @@ class TransactionForm extends StatelessWidget {
       return;
     }
 
-    onSubmit(title, value);
+    widget.onSubmit(title, value);
   }
-
-  TransactionForm(this.onSubmit);
 
   @override
   Widget build(BuildContext context) {
@@ -29,14 +35,14 @@ class TransactionForm extends StatelessWidget {
           children: [
             TextField(
               controller: titleController,
-              onSubmitted: (value) => _submitForm(),
+              onSubmitted: (_) => _submitForm(),
               decoration: InputDecoration(
                 labelText: 'Título',
               ),
             ),
             TextField(
               keyboardType: TextInputType.numberWithOptions(decimal: true),
-              onSubmitted: (value) => _submitForm(),
+              onSubmitted: (_) => _submitForm(),
               controller: valueController,
               decoration: InputDecoration(
                 labelText: 'Valor (R\$)',
